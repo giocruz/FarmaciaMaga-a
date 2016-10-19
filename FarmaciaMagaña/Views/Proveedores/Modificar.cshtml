@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Modificar Proveedor";
+}
+
+<div class="jumbotron">
+    <h3>MODIFICAR PROVEEDOR</h3>
+</div>
+
+
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Buscar</legend>
+
+            <div class="form-group">
+                <label for="inputID" class="col-lg-2 control-label">ID</label>
+                <div class="col-lg-3">
+                    <input class="form-control" id="inputID" placeholder="Código" type="text" />
+                </div>
+                <button type="submit" class="btn btn-default">Buscar</button>
+            </div>
+
+
+        </fieldset>
+    </form>
+
+    <form class="form-horizontal">
+    <fieldset>
+        <legend>Modificar proveedor</legend>
+
+
+        <div class="form-group">
+            <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputNombre" placeholder="Nombre o razón social" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputTel" class="col-lg-2 control-label">Teléfono</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputTel" placeholder="(000) 1234567" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputDomicilio" class="col-lg-2 control-label">Domicilio</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="inputDomicilio" placeholder="Av. Siempre Viva 742" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputemail" class="col-lg-2 control-label">e-Mail</label>
+            <div class="col-lg-10">
+
+                <input class="form-control" id="inputemail" placeholder="ejemplo@dominio.com.mx" type="text" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-primary">Eliminar</button>
+                <button type="submit" class="btn btn-default">Cancelar</button>
+                <button type="button" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

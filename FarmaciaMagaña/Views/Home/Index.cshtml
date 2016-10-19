@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+
+    <div class="row">
+        <div class="col-md-5">
+            <img src="~/media/logo/FarmaciaLogo.png" class="img-responsive" width="350" />
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <h3>Bienvenido(a). Para continuar, iniciar sesión.</h3>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                @Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", Class = "btn btn-success" })          
+                @Html.ActionLink("Manual de usuario", "Error", "Shared", routeValues: null, htmlAttributes: new {id="manual", Class = "btn btn-info" })
+                @Html.ActionLink("Soporte técnico", "Error", "Shared", routeValues: null, htmlAttributes: new { id = "manual", Class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+</div>
