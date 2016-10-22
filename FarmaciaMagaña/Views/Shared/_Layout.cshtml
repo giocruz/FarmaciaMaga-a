@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia Magaña</title>
     <link rel="icon" href="@Url.Content("~/favicon.ico")" />
+    <script type="text/javascript" src="~/Scripts/shortcut.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+   
 
 </head>
 <body>
@@ -29,12 +31,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Ventas", "Index", "Ventas")</li>
-                        <li>@Html.ActionLink("Inventario", "Inventario", "Productos")</li>
-                        <li>@Html.ActionLink("Compras", "Index", "Compras")</li>
+                        <li><a href='@Url.Action("Index","Ventas")'><img src="~/media/icons/cash.png" width="20" /> Ventas(1)</a> 
+                         @*@Html.ActionLink("Ventas(1)", "Index", "Ventas")*@</li>
+                        <li><a href='@Url.Action("Inventario","Productos")'><img src="~/media/icons/pricetags.png" width="20" /> Inventario(2)</a>
+                        <li><a href='@Url.Action("Index","Compras")'><img src="~/media/icons/bag.png" width="20" /> Compras(3)</a>
+                            @*<li>@Html.ActionLink("Inventario(2)", "Inventario", "Productos")</li>
+            <li>@Html.ActionLink("Compras(3)", "Index", "Compras")</li>*@
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Productos<span class="caret"></span></a>
+<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img src="~/media/icons/medkit.png" width="20" /> Productos<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='@Url.Action("Agregar","Productos")'>Agregar producto</a></li>
                                 <li><a href='@Url.Action("Modificar","Productos")'>Editar producto</a></li>
@@ -43,15 +49,16 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Proveedores<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img src="~/media/icons/person-stalker.png" width="20"/> Proveedores<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='@Url.Action("Agregar","Proveedores")'>Agregar proveedor</a></li>
                                 <li><a href='@Url.Action("Modificar","Proveedores")'>Editar proveedor</a></li>
                             </ul>
                         </li>
-                        <li>@Html.ActionLink("Reportes", "Index", "Reportes")</li>
-
-                    </ul>
+                        @*<li>@Html.ActionLink("Reportes(4)", "Index", "Reportes")</li>*@
+                        <li><a href='@Url.Action("Index","Reportes")'><img src="~/media/icons/stats-bars.png" width="20" /> Reportes(4)</a>
+</ul>
                     @Html.Partial("_LoginPartial")
                 </div>
             </div>

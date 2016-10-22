@@ -6,10 +6,19 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
-        <li>
+        @*<li>
             @Html.ActionLink("Panel", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-        </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Salir</a></li>
+        </li>*@
+
+        <li><a href='@Url.Action("Index","Manage")' title="Panel de control"><img src="~/media/icons/settings.png" width="25" /></a></li>
+
+        @*<li>
+            @Html.ActionLink("Ayuda", "Help", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        </li>*@
+        <li><a href='@Url.Action("Help","Home")' id="ayudaLink" title="Ayuda"><img src="~/media/icons/help-circled.png" width="25" /></a></li>
+        <li><a href="javascript:document.getElementById('logutForm)'.submit()" title="Cerrar sesión" id="logoutLink"><img src="~/media/icons/log-out.png" width="25" /></a></li>
+
+        @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Salir (0)</a></li>*@
     </ul>
     }
 }
@@ -17,7 +26,10 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         @*<li>@Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
-        <li>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-        <li>@Html.ActionLink("Ayuda", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        @*<li>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
+        @*<li>@Html.ActionLink("Ayuda", "Help", "Home", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>*@
+
+        <li><a href='@Url.Action("Login","Account")' id="loginLink" title="Iniciar sesión"><img src="~/media/icons/log-in.png" width="25" /></a></li>
+        <li><a href='@Url.Action("Help","Home")' id="ayudaLink" title="Ayuda"><img src="~/media/icons/help-circled.png" width="25" /></a></li>
     </ul>
 }

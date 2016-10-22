@@ -17,7 +17,12 @@ namespace FarmaciaMagaña.Controllers
             return View();
         }
 
-
+        [AllowAnonymous]
+        public ActionResult Help()
+        {
+            
+            return File("../media/documentation/Manual.pdf", "application/pdf", "Manual de usuario");
+        }
        
     }
 }
