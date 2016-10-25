@@ -400,6 +400,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FarmaciaMagaña.BLL\FarmaciaMagaña.BLL.csproj">
+      <Project>{75632366-a915-4d6a-8412-fb64675d9c38}</Project>
+      <Name>FarmaciaMagaña.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FarmaciaMagaña.Entities\FarmaciaMagaña.Entities.csproj">
+      <Project>{8957b080-6cdd-40df-9515-ef55ef0a3e76}</Project>
+      <Name>FarmaciaMagaña.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
