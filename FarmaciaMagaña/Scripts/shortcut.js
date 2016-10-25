@@ -6,20 +6,20 @@
  */
 
 function init() {
-    shortcut.add("1", function () {
-        window.location.href = "http://" + window.location.host + "/FarmaciaMagana/Ventas";
+    shortcut.add("F1", function () {
+        window.location.href = "http://" + window.location.host + "/Ventas";
     });
-    shortcut.add("2", function () {
-        window.location.href = "http://" + window.location.host + "/FarmaciaMagana/Productos/Inventario";
+    shortcut.add("F2", function () {
+        window.location.href = "http://" + window.location.host + "/Productos/Inventario";
     });
-    shortcut.add("3", function () {
-        window.location.href = "http://" + window.location.host + "/FarmaciaMagana/Compras";
+    shortcut.add("F3", function () {
+        window.location.href = "http://" + window.location.host + "/Compras";
     });
-    shortcut.add("4", function () {
-        window.location.href = "http://" + window.location.host + "/FarmaciaMagana/Reportes";
+    shortcut.add("F4", function () {
+        window.location.href = "http://" + window.location.host + "/Reportes";
     })
-    shortcut.add("0", function () {
-        window.location.href = "http://" + window.location.host + "/FarmaciaMagana/Home/Help";
+    shortcut.add("F12", function () {
+        window.location.href = "http://" + window.location.host + "/Home/Help";
     })
     shortcut.add("ESC", function () {
         document.getElementById('logoutForm').submit();
