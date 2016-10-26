@@ -41,5 +41,11 @@ namespace FarmaciaMagaña.Controllers
             return View();
         }
 
+        [AuthLog(Roles ="Sistema, Administrador")]
+        public ActionResult Categorias()
+        {
+            return View();
+        }
+
     }
 }

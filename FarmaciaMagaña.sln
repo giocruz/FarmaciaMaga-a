@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaMagaña.DAL", "Farm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaMagaña.Entities", "FarmaciaMagaña.Entities\FarmaciaMagaña.Entities.csproj", "{8957B080-6CDD-40DF-9515-EF55EF0A3E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaciaMagaña.Constrains", "FarmaciaMagaña.Constrains\FarmaciaMagaña.Constrains.csproj", "{8191C9F0-7581-45A2-A403-B7C51E4B37F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8957B080-6CDD-40DF-9515-EF55EF0A3E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8957B080-6CDD-40DF-9515-EF55EF0A3E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8957B080-6CDD-40DF-9515-EF55EF0A3E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8191C9F0-7581-45A2-A403-B7C51E4B37F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8191C9F0-7581-45A2-A403-B7C51E4B37F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8191C9F0-7581-45A2-A403-B7C51E4B37F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8191C9F0-7581-45A2-A403-B7C51E4B37F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

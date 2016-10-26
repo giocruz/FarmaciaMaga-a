@@ -1,0 +1,7 @@
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\obj\Debug\FarmaciaMagaña.DAL.csprojResolveAssemblyReference.cache
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\bin\Debug\FarmaciaMagaña.DAL.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\bin\Debug\FarmaciaMagaña.DAL.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\bin\Debug\FarmaciaMagaña.Entities.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\bin\Debug\FarmaciaMagaña.Entities.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\obj\Debug\FarmaciaMagaña.DAL.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.DAL\obj\Debug\FarmaciaMagaña.DAL.pdb

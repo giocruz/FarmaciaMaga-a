@@ -7,8 +7,10 @@ using FarmaciaMagaña.Entities;
 
 namespace FarmaciaMagaña.DAL
 {
-    class VentasDAL
+    public class VentasDAL
     {
+        Ventas venta = new Ventas();
+        List<Ventas> ventas = new List<Ventas>();
 
         public VentasDAL()
         {
@@ -18,12 +20,13 @@ namespace FarmaciaMagaña.DAL
         public List<Ventas> getAllVentas()
         {
 
+            return ventas;
         } 
 
         public Ventas getVenta(int idVenta)
         {
 
-           
+            return venta;  
         }
 
         public Boolean createVenta(Ventas venta)
@@ -31,6 +34,8 @@ namespace FarmaciaMagaña.DAL
 
             return true;
         }
+
+
 
         public Boolean deleteVenta(int idVenta)
         {

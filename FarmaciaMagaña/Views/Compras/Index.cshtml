@@ -16,19 +16,17 @@
 
 <div class="row">
 
-    <div class="col-lg-1">
-        <button type="button" class="btn btn-success">Registrar</button>
+    <div class="col-lg-3">
+        
     </div>
-    <div class="col-lg-1">
-        <button type="button" class="btn btn-primary">Cancelar</button>
-    </div>
-    <div class="col-lg-1"></div>
 
     <div class="col-lg-3">
         <div class="panel panel-default">
-            <div class="panel-heading">Empleado</div>
+            <div class="panel-heading">Proveedor</div>
             <div class="panel-body">
-                Admin
+                <select class="form-control">
+                    <option>Seleccionar proveedor...</option>
+                </select>
             </div>
         </div>
     </div>
@@ -41,7 +39,7 @@
             </div>
         </div>
     </div>
-
+    
 
     <div class="row">
         <div class="col-lg-3">
@@ -54,6 +52,29 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    
+    <div class="col-lg-3">
+        <label for="dropdownProducto">Producto:</label>
+        <select id="dropdownProducto" class="form-control">
+            <option>Seleccionar producto.</option>
+        </select>
+    </div>
+    <div class="col-lg-3">
+        <label for="cantidadProducto">Cantidad:</label>
+        <input type="text" class="form-control" id="cantidadProducto"/>
+    </div>
+    <div class="col-lg-3">
+        <br />
+        <input type="button" class="btn bg-success" value="Agregar producto(s)" id="btnAgregar" />
+    </div>
+    <div class="col-lg-3">
+
+    </div>
+    
+</div>
+<br /><br />
 
 <div class="row">
 
@@ -102,10 +123,15 @@
 </div>
 
 <div class="row">
-    <div class="col-lg-8">
-
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+            <button type="button" class="btn btn-success">Finalizar la compra.</button>         
     </div>
-    <div class="col-lg-4">
+    
+    <div class="col-lg-3">
+        <button type="button" class="btn btn-primary">Cancelar la compra.</button>
+    </div>
+    <div class="col-lg-3">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <span class="text-success">TOTAL: </span>

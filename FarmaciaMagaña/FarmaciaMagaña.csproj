@@ -387,6 +387,7 @@
     <Content Include="Views\Shared\AuthorizeFailed.cshtml" />
     <Content Include="Views\Productos\Papelera.cshtml" />
     <Content Include="Views\Compras\Index.cshtml" />
+    <Content Include="Views\Productos\Categorias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

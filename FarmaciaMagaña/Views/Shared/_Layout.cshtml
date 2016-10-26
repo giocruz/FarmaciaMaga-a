@@ -44,6 +44,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href='@Url.Action("Agregar","Productos")'>Agregar producto</a></li>
                                 <li><a href='@Url.Action("Modificar","Productos")'>Editar producto</a></li>
+                                <li><a href='@Url.Action("Categorias","Productos")'>Categorías</a></li>
                                 <li><a href='@Url.Action("Papelera","Productos")'>Papelera</a></li>
                             </ul>
                         </li>
@@ -68,7 +69,11 @@
             @RenderBody()
             <hr />
             <footer>
-                Todos los derechos reservados 2016.
+                Todos los derechos reservados 2016. Bienvenido(a), 
+                @if (User.Identity.IsAuthenticated)
+                {
+                   @User.Identity.Name; 
+                }
             </footer>
         </div>
     

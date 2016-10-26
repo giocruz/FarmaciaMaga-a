@@ -99,3 +99,7 @@ C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\Farma
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\obj\Debug\FarmaciaMagaña.csprojResolveAssemblyReference.cache
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\obj\Debug\FarmaciaMagaña.dll
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\obj\Debug\FarmaciaMagaña.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.BLL.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.Entities.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.BLL.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.Entities.pdb
