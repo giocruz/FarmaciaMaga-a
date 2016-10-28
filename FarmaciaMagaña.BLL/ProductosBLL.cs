@@ -1,4 +1,5 @@
 ﻿using FarmaciaMagaña.Entities;
+using FarmaciaMagaña.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,9 @@ namespace FarmaciaMagaña.BLL
     {
         Productos producto = new Productos();
         List<Productos> listaProductos = new List<Productos>();
+        ProductosDAL productosDAL = new ProductosDAL();
+
+       
 
         public ProductosBLL()
         {
@@ -31,8 +35,10 @@ namespace FarmaciaMagaña.BLL
 
         public Boolean createProducto(Productos producto)
         {
+           
 
-            return true;
+            Boolean success = productosDAL.createProducto(producto);
+            return success;
         }
 
         public Boolean updateProducto()

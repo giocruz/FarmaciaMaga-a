@@ -1,4 +1,6 @@
-﻿using FarmaciaMagaña.CustomFilters;
+﻿using FarmaciaMagaña.BLL;
+using FarmaciaMagaña.CustomFilters;
+using FarmaciaMagaña.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,9 @@ namespace FarmaciaMagaña.Controllers
     public class ProductosController : Controller
     {
 
+        ProductosBLL productosBLL = new ProductosBLL();
+        Productos producto = new Productos();
+
         [AuthLog(Roles = "Sistema, Administrador")]
         public ActionResult Index()
         {
@@ -19,6 +24,16 @@ namespace FarmaciaMagaña.Controllers
         [AuthLog(Roles = "Sistema, Administrador")]
         public ActionResult Agregar()
         {
+            //producto.Id = 101010;
+            //producto.Nombre = "Pepto Bismol";
+            //producto.Laboratorio = "El Tacuache";
+            //producto.id_Categoria = 2;
+            //producto.PrecioVenta = 49.00M;
+            //producto.CostoCompra = 30.50M;
+            //producto.Status = 1;
+            //producto.Cantidad = 2;
+            //producto.Descripcion = "Pal chorriento de Giovani";
+            productosBLL.createProducto(producto);
             return View();
         }
 

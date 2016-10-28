@@ -103,3 +103,5 @@ C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\Farma
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.Entities.dll
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.BLL.pdb
 C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.Entities.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.DAL.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña\bin\FarmaciaMagaña.DAL.pdb

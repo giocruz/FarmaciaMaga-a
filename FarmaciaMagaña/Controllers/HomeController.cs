@@ -14,6 +14,7 @@ namespace FarmaciaMagaña.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
+
             return View();
         }
 
