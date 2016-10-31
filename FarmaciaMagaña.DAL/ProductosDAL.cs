@@ -64,5 +64,52 @@ namespace FarmaciaMagaña.DAL
 
         }
 
+        public List<Productos> getAllProductos()
+        {
+            List<Productos> todosProductos = new List<Productos>();
+            Productos productos;
+            //Creamos un objeto de conexión para la BD, obteniendo la cadena de conexión del archivo web.config del proyecto
+            SqlConnection conexionSQL = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["ServidorSQL"].ConnectionString);
+            //Creamos una sentencia SQL para mandar llamar el Stored Procedure
+            SqlCommand comandoSQL = new SqlCommand();
+            SqlDataReader reader;
+
+            comandoSQL.CommandText = "getAllProducto";
+            comandoSQL.CommandType = CommandType.StoredProcedure;
+            comandoSQL.Connection = conexionSQL;
+
+            conexionSQL.Open();
+
+            reader = comandoSQL.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    //obtenemos para la variable todos los campos por fila
+                    productos = new Productos();
+                    productos.Id = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    productos.Nombre = reader.IsDBNull(1) ? null : reader.GetString(1);
+                    productos.Descripcion = reader.IsDBNull(2) ? null : reader.GetString(2);
+                    productos.CostoCompra = reader.IsDBNull(3) ? 0 : reader.GetDecimal(3);
+                    productos.PrecioVenta = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4);
+                    productos.Cantidad = reader.IsDBNull(5) ? 0 : reader.GetInt32(5);
+                    productos.Laboratorio = reader.IsDBNull(6) ? null : reader.GetString(6);
+                    productos.id_Categoria = reader.IsDBNull(7) ? 0 : reader.GetInt32(7);
+                    productos.Status = reader.IsDBNull(8) ? 0 : reader.GetInt32(8); 
+                    //Lo agregamos a la lista
+                    todosProductos.Add(productos);
+                }
+            }else
+            {
+                Console.WriteLine("Vacío");
+            }
+
+            reader.Close();
+
+            conexionSQL.Close();
+
+            return todosProductos;
+        }
     }
 }

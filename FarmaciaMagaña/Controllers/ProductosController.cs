@@ -1,6 +1,7 @@
 ﻿using FarmaciaMagaña.BLL;
 using FarmaciaMagaña.CustomFilters;
 using FarmaciaMagaña.Entities;
+using FarmaciaMagaña.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,11 @@ namespace FarmaciaMagaña.Controllers
         [AuthLog(Roles = "Sistema, Administrador, Empleado")]
         public ActionResult Inventario()
         {
-            return View();
+            List<ProductosModel> allProductosModel = new List<ProductosModel>();
+
+            allProductosModel = ProductosModel.listaProductos(productosBLL.getAllProductos());
+
+            return View("Inventario", allProductosModel);
         }
 
 

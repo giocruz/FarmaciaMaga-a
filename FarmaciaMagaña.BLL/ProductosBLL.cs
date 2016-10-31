@@ -29,7 +29,7 @@ namespace FarmaciaMagaña.BLL
 
         public List<Productos> getAllProductos()
         {
-
+            listaProductos = productosDAL.getAllProductos();
             return listaProductos;
         }
 
