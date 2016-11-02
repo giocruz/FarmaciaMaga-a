@@ -10,7 +10,15 @@ namespace FarmaciaMagaña.Entities
     {
         public Productos()
         {
-
+            Id = 0;
+            Nombre = string.Empty;
+            Descripcion = string.Empty;
+            CostoCompra = 0;
+            PrecioVenta = 0;
+            Cantidad = 0;
+            Laboratorio = string.Empty;
+            IDCategoria = 1;
+            Status = 1;
         }
 
         public int Id { get; set; }
@@ -20,7 +28,7 @@ namespace FarmaciaMagaña.Entities
         public decimal PrecioVenta { get; set; }
         public int Cantidad { get; set; }
         public string Laboratorio { get; set; }
-        public int id_Categoria { get; set; }
+        public int IDCategoria { get; set; }
         public int Status { get; set; }
 
     }

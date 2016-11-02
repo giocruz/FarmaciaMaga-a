@@ -20,5 +20,7 @@ namespace FarmaciaMagaña.DAL
         }
 
         public System.Data.Entity.DbSet<FarmaciaMagaña.Models.ProductosModel> allProductos { get; set; }
+
+        
     }
 }

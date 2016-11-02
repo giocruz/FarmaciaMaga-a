@@ -38,7 +38,7 @@ namespace FarmaciaMagaña.DAL
             comandoSQL.Parameters.AddWithValue("@PrecioVenta", ProductoEntitiy.PrecioVenta);
             comandoSQL.Parameters.AddWithValue("@Cantidad", ProductoEntitiy.Cantidad);
             comandoSQL.Parameters.AddWithValue("@Laboratorio", ProductoEntitiy.Laboratorio);
-            comandoSQL.Parameters.AddWithValue("@IDCategoria", ProductoEntitiy.id_Categoria);
+            comandoSQL.Parameters.AddWithValue("@IDCategoria", ProductoEntitiy.IDCategoria);
             comandoSQL.Parameters.AddWithValue("@Status", ProductoEntitiy.Status);
 
             //ejecutamos el comando en un try catch
@@ -95,7 +95,7 @@ namespace FarmaciaMagaña.DAL
                     productos.PrecioVenta = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4);
                     productos.Cantidad = reader.IsDBNull(5) ? 0 : reader.GetInt32(5);
                     productos.Laboratorio = reader.IsDBNull(6) ? null : reader.GetString(6);
-                    productos.id_Categoria = reader.IsDBNull(7) ? 0 : reader.GetInt32(7);
+                    productos.IDCategoria = reader.IsDBNull(7) ? 0 : reader.GetInt32(7);
                     productos.Status = reader.IsDBNull(8) ? 0 : reader.GetInt32(8); 
                     //Lo agregamos a la lista
                     todosProductos.Add(productos);

@@ -1,4 +1,5 @@
-﻿
+﻿@model FarmaciaMagaña.Models.ProductosModel
+
 @{
     ViewBag.Title = "Nuevo Producto";
 }
@@ -9,11 +10,115 @@
 
 <div class="row">
 
-    <form class="form-horizontal">
-        <fieldset>
-            <legend>Agregar nuevo producto</legend>
+    <!-- EMPIEZA LO CHIDO -->
+    @using (Html.BeginForm("AgregarProducto", "Productos", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        <header>
             
-            <div class="form-group">
+        </header>
+
+        <fieldset>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <section class="col-md-3">
+                    @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label"})
+                    <label class="label">
+                        @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "control-label form-control"}})
+                    </label>
+                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                </section>
+
+                <section class="col-lg-7">
+                    @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </section>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <section class="col-md-11">
+                    @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                </section>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <section class="col-md-3">
+                    @Html.LabelFor(model => model.CostoCompra, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.CostoCompra, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.CostoCompra, "", new { @class = "text-danger" })
+                </section>
+           
+
+                <section class="col-md-7">
+                    @Html.LabelFor(model => model.PrecioVenta, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.PrecioVenta, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.PrecioVenta, "", new { @class = "text-danger" })
+                </section>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <section class="col-lg-3">
+                    @Html.LabelFor(model => model.Cantidad, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+                </section>
+
+                <section class="col-lg-7">
+                    @Html.LabelFor(model => model.Laboratorio, htmlAttributes: new { @class = "control-label" })
+                    <label class="label">
+                        @Html.EditorFor(model => model.Laboratorio, new { htmlAttributes = new { @class = "control-label form-control" } })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.Laboratorio, "", new { @class = "text-danger" })
+                </section>
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-4">
+                    @Html.LabelFor(model => model.IDCategoria, htmlAttributes: new { @class = "control-label" })
+                    @Html.DropDownList("IDCategoria", (List<SelectListItem>)ViewBag.Categorias, "Seleccionar categoría...", new { @class = "form-control", @id = "IDCategoria" })
+                </div>
+                
+            </div>
+        </fieldset>
+        <div class="row">
+            <footer>
+                <div class="row">
+
+
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <input type="submit" value="Crear" class="btn btn-primary" />
+                    </div>
+                    <div class="col-md-1">
+                        @Html.ActionLink("Salir", "Inventario", null, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    }
+    <!-- TERMINA LO CHIDO -->
+
+
+            @*<div class="form-group">
                 <label for="inputID" class="col-lg-2 control-label">ID</label>
                 <div class="col-lg-10">
                     <input class="form-control" id="inputID" placeholder="Código" type="text" />
@@ -66,27 +171,17 @@
             <div class="form-group">
                 <label for="comboTipo" class="col-lg-2 control-label">Categoría</label>
                 <div class="col-lg-10">
-                    <select class="form-control" id="comboTipo">
-                        <option>Analgésico</option>
-                        <option>Antiinflamatorio</option>
-                        <option>Antibiótico</option>
-                        <option>Estomacales</option>
-                        <option>Antigripal</option>
-                        <option>Vitaminas</option>
-                        <option>Varios</option>
-
-                    </select>
+                    @Html.DropDownList("Categorias", (List<SelectListItem>)ViewBag.Categorias, "Seleccionar categoría...", new { @class = "form-control", @id = "dropdownCategoria"})
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                    <button type="reset" class="btn btn-default">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <a href="#" id="btnCancelar" class="btn btn-primary">Regresar</a>
+                    <button type="reset" class="btn btn-default">Borrar todo</button>
+                    <a href="#" class="btn btn-success" id="AceptarBtn">Aceptar</a>
                 </div>
-            </div>
-        </fieldset>
-    </form>
+            </div>*@
+ 
 
 </div>
-

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FarmaciaMagaña.DAL;
 
 namespace FarmaciaMagaña.Controllers
 {
@@ -14,7 +15,9 @@ namespace FarmaciaMagaña.Controllers
     {
 
         ProductosBLL productosBLL = new ProductosBLL();
-        Productos producto = new Productos();
+        CategoriasBLL categoriasBLL = new CategoriasBLL();
+        Productos producto;
+        private BaseDeDatos BD = new BaseDeDatos();
 
         [AuthLog(Roles = "Sistema, Administrador")]
         public ActionResult Index()
@@ -25,17 +28,55 @@ namespace FarmaciaMagaña.Controllers
         [AuthLog(Roles = "Sistema, Administrador")]
         public ActionResult Agregar()
         {
-            //producto.Id = 101010;
-            //producto.Nombre = "Pepto Bismol";
-            //producto.Laboratorio = "El Tacuache";
-            //producto.id_Categoria = 2;
-            //producto.PrecioVenta = 49.00M;
-            //producto.CostoCompra = 30.50M;
-            //producto.Status = 1;
-            //producto.Cantidad = 2;
-            //producto.Descripcion = "Pal chorriento de Giovani";
-            productosBLL.createProducto(producto);
-            return View();
+            //Armar una lista de categorias para el dropdown
+            var categorias = categoriasBLL.getAllCategorias();
+            List<SelectListItem> listaCategorias = new List<SelectListItem>();
+            SelectListItem itemCategoria;
+            
+
+            foreach(var c in categorias)
+            {
+                itemCategoria = new SelectListItem();
+                itemCategoria.Value = Convert.ToString(c.Id);
+                itemCategoria.Text = c.Nombre;
+                listaCategorias.Add(itemCategoria);
+            }
+
+            ViewBag.Categorias = listaCategorias;
+            //productosBLL.createProducto(producto);
+            return View("Agregar");
+        }
+
+        //Crear un nuevo producto
+        [AuthLog(Roles = "Sistema, Administrador")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AgregarProducto([Bind(Include = "ID,Nombre,Descripcion,CostoCompra,PrecioVenta,Cantidad,Laboratorio,IDCategoria")] ProductosModel productoModel)
+        {
+            //Es un método que recibe un objeto de tipo producto tipo modelo (agregar el Model al final del nombre)
+            if (ModelState.IsValid)
+            {
+                //Creamos un objeto producto pero del tipo Entity (entidad) para que la BD lo pueda manejar
+                Productos productoEntity = new Productos();
+                //pasamos los parámetros del modelo a la entidad:
+                productoEntity.Id = productoModel.Id;
+                productoEntity.Nombre = productoModel.Nombre;
+                productoEntity.Descripcion = productoModel.Descripcion;
+                productoEntity.CostoCompra = productoModel.CostoCompra;
+                productoEntity.PrecioVenta = productoModel.PrecioVenta;
+                productoEntity.Cantidad = productoModel.Cantidad;
+                productoEntity.Laboratorio = productoModel.Laboratorio;
+                productoEntity.IDCategoria = productoModel.IDCategoria;
+
+                //llamamos la lógica de negocios de Producto para mandar guardar el producto. Obvio pasándole la entidad como parámetro
+                productosBLL.createProducto(productoEntity);
+                //Hacemos que nos redirija al inventario
+                return RedirectToAction("Inventario");
+            }
+
+
+            return View(productoModel);
+
         }
 
         [AuthLog(Roles = "Sistema, Administrador")]
@@ -58,6 +99,7 @@ namespace FarmaciaMagaña.Controllers
         [AuthLog(Roles = "Sistema, Administrador")]
         public ActionResult Papelera()
         {
+
             return View();
         }
 

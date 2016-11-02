@@ -8,9 +8,9 @@ namespace FarmaciaMagaña.Entities
 {
     public class Categoria
     {
-        int Id { get; set; }
-        string Nombre { get; set; }
-        int Status { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public int Status { get; set; }
 
     }
 }

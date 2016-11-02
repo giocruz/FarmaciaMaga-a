@@ -20,8 +20,8 @@ namespace FarmaciaMagaña.Models
             PrecioVenta = 0;
             Cantidad = 0;
             Laboratorio = string.Empty;
-            id_Categoria = 0;
-            Status = 0;
+            IDCategoria = 0;
+            Status = 1;
         }
 
         [Display(Name = "Código")]
@@ -39,7 +39,7 @@ namespace FarmaciaMagaña.Models
         [Display (Name = "Laboratorio de origen")]
         public string Laboratorio { get; set; }
         [Display (Name = "Categoría")]
-        public int id_Categoria { get; set; }
+        public int IDCategoria { get; set; }
         public int Status { get; set; }
 
 
@@ -69,11 +69,18 @@ namespace FarmaciaMagaña.Models
             productosModel.PrecioVenta = producto.PrecioVenta;
             productosModel.Cantidad = producto.Cantidad;
             productosModel.Laboratorio = producto.Laboratorio;
-            productosModel.id_Categoria = producto.id_Categoria;
+            productosModel.IDCategoria = producto.IDCategoria;
             productosModel.Status = producto.Status;
 
 
             return productosModel;
+        }
+
+        public string nombreCategoria(int IDCategoria)
+        {
+            CategoriasBLL categoriabll = new CategoriasBLL();
+            string nombre = categoriabll.nombreCategoria(IDCategoria);
+            return nombre;
         }
     }
 }

@@ -1,0 +1,4 @@
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.Constrains\bin\Debug\FarmaciaMagaña.Constrains.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.Constrains\bin\Debug\FarmaciaMagaña.Constrains.pdb
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.Constrains\obj\Debug\FarmaciaMagaña.Constrains.dll
+C:\Users\LuisEduardo\Documents\Visual Studio 2015\Projects\FarmaciaMagaña\FarmaciaMagaña.Constrains\obj\Debug\FarmaciaMagaña.Constrains.pdb

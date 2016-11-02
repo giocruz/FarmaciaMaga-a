@@ -36,7 +36,7 @@ namespace FarmaciaMagaña.BLL
         public Boolean createProducto(Productos producto)
         {
            
-
+            //únicamente recibe la entidad y la pasa a la capa de acceso a datos
             Boolean success = productosDAL.createProducto(producto);
             return success;
         }

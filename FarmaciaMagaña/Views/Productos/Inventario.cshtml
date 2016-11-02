@@ -16,7 +16,8 @@
                 <th>@Html.DisplayNameFor(model => model.Nombre)</th>
                 <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
                 <th>@Html.DisplayNameFor(model => model.Cantidad)</th>
-                <th>@Html.DisplayNameFor(model => model.id_Categoria)</th>
+                <th>@Html.DisplayNameFor(model => model.IDCategoria)</th>
+
             </tr>
         </thead>
         <tbody>
@@ -36,8 +37,11 @@
                         @Html.DisplayFor(modelItem => item.Cantidad)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.id_Categoria)
+                        @Html.DisplayFor(modelItem => item.IDCategoria)
+
+                        @*@Html.DisplayFor(modelItem => item.nombreCategoria(item.IDCategoria));*@
                     </td>
+                    
                 </tr>
             }
         </tbody>
